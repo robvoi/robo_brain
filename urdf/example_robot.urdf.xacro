@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot">
+
+    <xacro:include filename="example_include.xacro" />
+
+
+  <!-- ****************** ROBOT BASE FOOTPRINT ***************************  -->
+  <!-- Define the center of the main robot chassis projected on the ground -->	
+  <link name="base_footprint"/>
+
+  <!-- ********************** ROBOT BASE *********************************  -->
+
+
+	<joint name="base_joint" type="fixed">
+
+	<origin xyz="0 0 0" rpy="0 0 0"/>
+
+	<parent link="base_footprint"/>
+
+	<child link="base_link"/>
+
+	</joint> 
+-	
+    <link name="base_link">
+        <visual>
+            <origin xyz="0 0 0.00" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.35 0.35 0.2" />
+            </geometry>
+            <material name="green">
+                <color rgba="0.2 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.00" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.4 0.4 0.25" />
+            </geometry>
+        </collision>
+    </link>
+
+
+    <joint name="lidar_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="lidar_link"/>
+        <origin xyz="0 0 0.2" rpy="0 0 0"/>
+    </joint>
+
+    <link name="lidar_link">
+        <visual>
+            <origin xyz="0 0 0.25" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.05" length="0.16"/>
+            </geometry>
+            <material name="green">
+                <color rgba="0.2 1 0.2 1"/>
+            </material>
+        </visual>
+
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <cylinder radius="0.0508" length="0.18"/>
+            </geometry>
+        </collision>
+
+    </link>
+
+
+</robot>

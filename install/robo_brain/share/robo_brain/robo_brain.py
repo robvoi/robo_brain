@@ -21,11 +21,9 @@ def generate_launch_description():
 
     # Specify the name of the package and path to xacro file within the package
     pkg_name = 'urdf_example'
-    file_subpath = 'description/example_robot.urdf.xacro'
-
+    file_subpath = '/home/robo/robo_ws/robo_brain/urdf/example_robot.urdf.xacro'
     # Use xacro to process the file
-    xacro_file = os.path.join(
-        get_package_share_directory(pkg_name), file_subpath)
+    xacro_file = os.path.join(file_subpath)
     robot_description_raw = xacro.process_file(xacro_file).toxml()
 
     return LaunchDescription([
@@ -69,7 +67,8 @@ def generate_launch_description():
                          'frame_id': frame_id,
                          'inverted': inverted,
                          'angle_compensate': angle_compensate}],
-            output='screen'),
+            output='screen',
+            arguments=['--ros-args', '--log-level', 'WARN']),
 
         Node(
             package="tf2_ros",
@@ -106,12 +105,14 @@ def generate_launch_description():
                     'odom_frame_id': 'odom',
                     'init_pose_from_topic': '',
                     'freq': 10.0}],
+            arguments=['--ros-args', '--log-level', 'WARN']
         ),
 
         Node(
             package='robot_state_publisher',
             executable='robot_state_publisher',
             output='screen',
-            parameters=[{'robot_description': robot_description_raw}]),
+            parameters=[{'robot_description': robot_description_raw}],
+            arguments=[file_subpath]),
 
     ])
