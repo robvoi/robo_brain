@@ -108,7 +108,7 @@ def generate_launch_description():
                     'freq': 40.0}],
             arguments=['--ros-args', '--log-level', 'ERROR']
         ),
-#"""
+
 
         Node(
             package='robot_state_publisher',
