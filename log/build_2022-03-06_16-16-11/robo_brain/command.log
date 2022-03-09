@@ -1,0 +1,4 @@
+Invoking command in '/home/robo/robo_ws/robo_brain/build/robo_brain': /usr/bin/cmake --build /home/robo/robo_ws/robo_brain/build/robo_brain -- -j4 -l4
+Invoked command in '/home/robo/robo_ws/robo_brain/build/robo_brain' returned '0': /usr/bin/cmake --build /home/robo/robo_ws/robo_brain/build/robo_brain -- -j4 -l4
+Invoking command in '/home/robo/robo_ws/robo_brain/build/robo_brain': /usr/bin/cmake --install /home/robo/robo_ws/robo_brain/build/robo_brain
+Invoked command in '/home/robo/robo_ws/robo_brain/build/robo_brain' returned '0': /usr/bin/cmake --install /home/robo/robo_ws/robo_brain/build/robo_brain

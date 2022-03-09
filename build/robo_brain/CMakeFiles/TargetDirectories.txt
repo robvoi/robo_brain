@@ -1,0 +1,10 @@
+/home/robo/robo_ws/robo_brain/build/robo_brain/CMakeFiles/install/local.dir
+/home/robo/robo_ws/robo_brain/build/robo_brain/CMakeFiles/install.dir
+/home/robo/robo_ws/robo_brain/build/robo_brain/CMakeFiles/list_install_components.dir
+/home/robo/robo_ws/robo_brain/build/robo_brain/CMakeFiles/rebuild_cache.dir
+/home/robo/robo_ws/robo_brain/build/robo_brain/CMakeFiles/edit_cache.dir
+/home/robo/robo_ws/robo_brain/build/robo_brain/CMakeFiles/test.dir
+/home/robo/robo_ws/robo_brain/build/robo_brain/CMakeFiles/main.dir
+/home/robo/robo_ws/robo_brain/build/robo_brain/CMakeFiles/install/strip.dir
+/home/robo/robo_ws/robo_brain/build/robo_brain/CMakeFiles/robo_brain_uninstall.dir
+/home/robo/robo_ws/robo_brain/build/robo_brain/CMakeFiles/uninstall.dir
