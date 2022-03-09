@@ -105,7 +105,7 @@ def generate_launch_description():
                     'odom_frame_id': 'odom',
                     'init_pose_from_topic': '',
                     'freq': 10.0}],
-            arguments=['--ros-args', '--log-level', 'WARN']
+            arguments=['--ros-args', '--log-level', 'ERROR']
         ),
 
         Node(
