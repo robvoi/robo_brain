@@ -85,13 +85,14 @@ def generate_launch_description():
         ),
 
 
-        # Node(
-        #   package='ros2_laser_scan_matcher',
-        #   executable='laser_scan_matcher',
-        #   parameters=[{'publish_odom':'odom',
-        #                'publish_tf': publish_tf,
-        #                'base_frame':'base_footprint'}]),
+        Node(
+            package='ros2_laser_scan_matcher',
+            executable='laser_scan_matcher',
+            parameters=[{'publish_odom': 'odom',
+                        'publish_tf': publish_tf,
+                         'base_frame': 'base_footprint'}]),
 
+        """
         Node(
             package='rf2o_laser_odometry',
             executable='rf2o_laser_odometry_node',
@@ -107,7 +108,7 @@ def generate_launch_description():
                     'freq': 40.0}],
             arguments=['--ros-args', '--log-level', 'ERROR']
         ),
-
+        """
 
         Node(
             package='robot_state_publisher',
