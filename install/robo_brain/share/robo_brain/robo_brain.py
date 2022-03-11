@@ -77,12 +77,12 @@ def generate_launch_description():
             arguments=["0", "0", "0", "0", "0", "0", "lidar_link", "laser"]
         ),
 
-        Node(
-            package="tf2_ros",
-            executable="static_transform_publisher",
-            output="screen",
-            arguments=["0", "0", "0", "0", "0", "0", "base_link", "lidar_link"]
-        ),
+        #Node(
+        #    package="tf2_ros",
+        #    executable="static_transform_publisher",
+        #    output="screen",
+        #    arguments=["0", "0", "0", "0", "0", "0", "base_link", "lidar_link"]
+        #),
 
 
         Node(
