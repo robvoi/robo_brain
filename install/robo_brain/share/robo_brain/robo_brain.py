@@ -17,7 +17,7 @@ def generate_launch_description():
     inverted = LaunchConfiguration('inverted', default='false')
     angle_compensate = LaunchConfiguration('angle_compensate', default='true')
 
-    publish_tf = LaunchConfiguration('publish_tf', default='true')
+    publish_tf = LaunchConfiguration('publish_tf', default='false')
 
     # Specify the name of the package and path to xacro file within the package
     pkg_name = 'urdf_example'
@@ -85,28 +85,28 @@ def generate_launch_description():
         #),
 
 
-        #Node(
-        #    package='ros2_laser_scan_matcher',
-        #    executable='laser_scan_matcher',
-        #    parameters=[{'publish_odom': 'odom',
-        #                'publish_tf': publish_tf,
-        #                 'base_frame': 'base_footprint'}]),
-
         Node(
-            package='rf2o_laser_odometry',
-            executable='rf2o_laser_odometry_node',
-            name='rf2o_laser_odometry',
-            output='screen',
-            parameters=[{
-                    'laser_scan_topic': '/scan',
-                    'odom_topic': '/odom',
-                    'publish_tf': True,
-                    'base_frame_id': 'base_footprint',
-                    'odom_frame_id': 'odom',
-                    'init_pose_from_topic': '',
-                    'freq': 20.0}],
-            arguments=['--ros-args', '--log-level', 'ERROR']
-        ),
+            package='ros2_laser_scan_matcher',
+            executable='laser_scan_matcher',
+            parameters=[{'publish_odom': 'odom',
+                        'publish_tf': publish_tf,
+                        'base_frame': 'base_footprint'}]),
+
+        #Node(
+        #    package='rf2o_laser_odometry',
+        #    executable='rf2o_laser_odometry_node',
+        #    name='rf2o_laser_odometry',
+        #    output='screen',
+        #    parameters=[{
+        #            'laser_scan_topic': '/scan',
+        #            'odom_topic': '/odom',
+        #            'publish_tf': True,
+        #            'base_frame_id': 'base_footprint',
+        #            'odom_frame_id': 'odom',
+        #            'init_pose_from_topic': '',
+        #           'freq': 20.0}],
+        #   arguments=['--ros-args', '--log-level', 'ERROR']
+        #),
 
         Node(
             package='robot_state_publisher',
