@@ -17,7 +17,7 @@ def generate_launch_description():
     inverted = LaunchConfiguration('inverted', default='false')
     angle_compensate = LaunchConfiguration('angle_compensate', default='true')
 
-    publish_tf = LaunchConfiguration('publish_tf', default='false')
+    publish_tf = LaunchConfiguration('publish_tf', default='true')
 
     # Specify the name of the package and path to xacro file within the package
     pkg_name = 'urdf_example'
