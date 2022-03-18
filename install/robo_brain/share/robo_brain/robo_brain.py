@@ -77,12 +77,12 @@ def generate_launch_description():
             arguments=["0", "0", "0", "0", "0", "0", "lidar_link", "laser"]
         ),
 
-        #Node(
+        # Node(
         #    package="tf2_ros",
         #    executable="static_transform_publisher",
         #    output="screen",
         #    arguments=["0", "0", "0", "0", "0", "0", "odom", "base_footprint"]
-        #),
+        # ),
 
         # Node(
         #    package="tf2_ros",
@@ -111,7 +111,7 @@ def generate_launch_description():
                     'base_frame_id': 'base_footprint',
                     'odom_frame_id': 'odom',
                     'init_pose_from_topic': '',
-                   'freq': 10.0}],
+                    'freq': 7.0}],
             arguments=['--ros-args', '--log-level', 'ERROR']
         ),
 
