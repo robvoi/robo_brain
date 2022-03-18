@@ -6,10 +6,14 @@ from ament_index_python.packages import get_package_share_directory
 from launch.actions import DeclareLaunchArgument
 from launch.actions import LogInfo
 from launch.substitutions import LaunchConfiguration
+from nav2_common.launch import RewrittenYaml
 import xacro
 
 
 def generate_launch_description():
+    use_sim_time = LaunchConfiguration('use_sim_time')
+    slam_params_file = LaunchConfiguration('slam_params_file')
+
     serial_port = LaunchConfiguration('serial_port', default='/dev/ttyUSB0')
     serial_baudrate = LaunchConfiguration(
         'serial_baudrate', default='115200')  # for A1/A2 is 115200
@@ -27,6 +31,17 @@ def generate_launch_description():
     robot_description_raw = xacro.process_file(xacro_file).toxml()
 
     return LaunchDescription([
+
+        DeclareLaunchArgument(
+            'use_sim_time',
+            default_value='false',
+            description='Dont use simulation/Gazebo clock'),
+
+        DeclareLaunchArgument(
+            'slam_params_file',
+            default_value=os.path.join(get_package_share_directory("slam_toolbox"),
+                                       'config', 'mapper_params_online_async.yaml'),
+            description='Full path to the ROS2 parameters file to use for the slam_toolbox node'),
 
         DeclareLaunchArgument(
             'publish_tf',
@@ -66,7 +81,7 @@ def generate_launch_description():
                          'serial_baudrate': serial_baudrate,
                          'frame_id': frame_id,
                          'inverted': inverted,
-                         'angle_compensate': angle_compensate}],
+                         'angle_compensate': angle_compensate,}],
             output='screen',
             arguments=['--ros-args', '--log-level', 'WARN']),
 
@@ -76,13 +91,6 @@ def generate_launch_description():
             output="screen",
             arguments=["0", "0", "0", "0", "0", "0", "lidar_link", "laser"]
         ),
-
-        #Node(
-        #    package="tf2_ros",
-        #    executable="static_transform_publisher",
-        #    output="screen",
-        #    arguments=["0", "0", "0", "0", "0", "0", "odom", "base_footprint"]
-        #),
 
         # Node(
         #    package="tf2_ros",
@@ -96,8 +104,8 @@ def generate_launch_description():
         #    package='ros2_laser_scan_matcher',
         #    executable='laser_scan_matcher',
         #    parameters=[{'publish_odom': 'odom',
-        #               'publish_tf': publish_tf,
-        #               'base_frame': 'base_link'}]),
+        #                'publish_tf': publish_tf,
+        #                'base_frame': 'base_link'}]),
 
         Node(
             package='rf2o_laser_odometry',
@@ -105,13 +113,13 @@ def generate_launch_description():
             name='rf2o_laser_odometry',
             output='screen',
             parameters=[{
-                    'laser_scan_topic': '/scan',
-                    'odom_topic': '/odom',
-                    'publish_tf': True,
-                    'base_frame_id': 'base_footprint',
-                    'odom_frame_id': 'odom',
-                    'init_pose_from_topic': '',
-                   'freq': 20.0}],
+                   'laser_scan_topic': '/scan',
+                   'odom_topic': '/odom',
+                   'publish_tf': True,
+                   'base_frame_id': 'base_footprint',
+                   'odom_frame_id': 'odom',
+                   'init_pose_from_topic': '',
+                   'freq': 10.0}],
             arguments=['--ros-args', '--log-level', 'ERROR']
         ),
 
@@ -121,5 +129,15 @@ def generate_launch_description():
             output='screen',
             parameters=[{'robot_description': robot_description_raw}],
             arguments=[file_subpath]),
+
+        Node(
+            parameters=[
+                slam_params_file,
+                {'use_sim_time': use_sim_time}
+            ],
+            package='slam_toolbox',
+            executable='async_slam_toolbox_node',
+            name='slam_toolbox',
+            output='screen')
 
     ])

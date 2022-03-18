@@ -1,0 +1,16 @@
+/home/robo/robo_ws/robo_brain/install/robo_brain/lib/robo_brain/main
+/home/robo/robo_ws/robo_brain/install/robo_brain/share/ament_index/resource_index/package_run_dependencies/robo_brain
+/home/robo/robo_ws/robo_brain/install/robo_brain/share/ament_index/resource_index/parent_prefix_path/robo_brain
+/home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/environment/ament_prefix_path.sh
+/home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/environment/ament_prefix_path.dsv
+/home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/environment/path.sh
+/home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/environment/path.dsv
+/home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/local_setup.bash
+/home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/local_setup.sh
+/home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/local_setup.zsh
+/home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/local_setup.dsv
+/home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/package.dsv
+/home/robo/robo_ws/robo_brain/install/robo_brain/share/ament_index/resource_index/packages/robo_brain
+/home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/cmake/robo_brainConfig.cmake
+/home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/cmake/robo_brainConfig-version.cmake
+/home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/package.xml

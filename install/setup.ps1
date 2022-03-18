@@ -22,7 +22,13 @@ function _colcon_prefix_chain_powershell_source_script {
 }
 
 # source chained prefixes
-_colcon_prefix_chain_powershell_source_script "/home/robo/ros2_galactic/ros2-linux\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/opt/ros/galactic\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/robo/robo_ws/sllidar_ros2/install\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/robo/robo_ws/urdf_example/install\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/robo/teleop_tools_ws/install\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/robo/robo_ws/ros2_laser_scan_matcher/install\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/robo/robo_ws/csm/install\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/robo/robo_ws/rf2o_laser_odometry/install\local_setup.ps1"
 
 # source this prefix
 $env:COLCON_CURRENT_PREFIX=(Split-Path $PSCommandPath -Parent)

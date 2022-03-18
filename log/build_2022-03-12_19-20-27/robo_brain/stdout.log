@@ -1,0 +1,40 @@
+-- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.10.6 (/opt/ros/galactic/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/robo/robo_ws/robo_brain/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/robo/robo_ws/robo_brain/build/robo_brain
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[100%] [32m[1mLinking CXX executable main[0m
+[100%] Built target main
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /home/robo/robo_ws/robo_brain/install/robo_brain/lib/robo_brain/main
+-- Symlinking: /home/robo/robo_ws/robo_brain/install/robo_brain/share/ament_index/resource_index/package_run_dependencies/robo_brain
+-- Symlinking: /home/robo/robo_ws/robo_brain/install/robo_brain/share/ament_index/resource_index/parent_prefix_path/robo_brain
+-- Symlinking: /home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/environment/ament_prefix_path.sh
+-- Symlinking: /home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/environment/ament_prefix_path.dsv
+-- Symlinking: /home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/environment/path.sh
+-- Symlinking: /home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/environment/path.dsv
+-- Symlinking: /home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/local_setup.bash
+-- Symlinking: /home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/local_setup.sh
+-- Symlinking: /home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/local_setup.zsh
+-- Symlinking: /home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/local_setup.dsv
+-- Symlinking: /home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/package.dsv
+-- Symlinking: /home/robo/robo_ws/robo_brain/install/robo_brain/share/ament_index/resource_index/packages/robo_brain
+-- Symlinking: /home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/cmake/robo_brainConfig.cmake
+-- Symlinking: /home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/cmake/robo_brainConfig-version.cmake
+-- Symlinking: /home/robo/robo_ws/robo_brain/install/robo_brain/share/robo_brain/package.xml
