@@ -55,7 +55,7 @@ def generate_launch_description():
             package='micro_ros_agent',
             executable='micro_ros_agent',
             name='micro_ros_agent',
-            arguments=["serial", "-b", "230400", "-D", "/dev/ttyUSB1"]
+            arguments=["serial", "-b", "230400", "-D", "/dev/ttyACM0"]
         ),
 
         Node(
