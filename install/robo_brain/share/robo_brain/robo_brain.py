@@ -70,28 +70,6 @@ def generate_launch_description():
             output='screen',
             arguments=['--ros-args', '--log-level', 'WARN']),
 
-        Node(
-            package="tf2_ros",
-            executable="static_transform_publisher",
-            output="screen",
-            arguments=["0", "0", "0", "0", "0", "0", "lidar_link", "laser"]
-        ),
-
-        # Node(
-        #    package="tf2_ros",
-        #    executable="static_transform_publisher",
-        #    output="screen",
-        #    arguments=["0", "0", "0", "0", "0", "0", "odom", "base_footprint"]
-        # ),
-
-        # Node(
-        #    package="tf2_ros",
-        #    executable="static_transform_publisher",
-        #    output="screen",
-        #    arguments=["0", "0", "0", "0", "0", "0", "base_link", "lidar_link"]
-        # ),
-
-
         # Node(
         #    package='ros2_laser_scan_matcher',
         #    executable='laser_scan_matcher',
