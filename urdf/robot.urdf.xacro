@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot">
 
-    <xacro:include filename="example_include.xacro" />
+    <!--xacro:include filename="example_include.xacro" /-->
 
 
     <!-- ****************** ROBOT BASE FOOTPRINT ***************************  -->
