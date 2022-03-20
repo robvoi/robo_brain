@@ -55,7 +55,7 @@ def generate_launch_description():
             package='micro_ros_agent',
             executable='micro_ros_agent',
             name='micro_ros_agent',
-            arguments=["serial", "-b", "230400", "-D", "/dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0"]
+            arguments=["serial", "-b", "230400", "-D", "/dev/ttyUSB1"]
         ),
 
         Node(
